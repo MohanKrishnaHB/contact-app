@@ -14,12 +14,12 @@ $name= $_POST['name'];
 $email= $_POST['email'];
 $phno= $_POST['phoneNumber'];
 
-$sql = "INSERT INTO contact (ID, Name, Email, PhoneNumber) VALUES($id, $name, $email, $phno)";
+$sql = "INSERT INTO Contact (ID, Name, Email, PhoneNumber) VALUES('$id', '$name', '$email', '$phno')";
 echo("Query Executed: $sql");
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo("New record created successfully");
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo("Error: " . $sql . "<br>" . $conn->error);
 }
 
 $conn->close();
